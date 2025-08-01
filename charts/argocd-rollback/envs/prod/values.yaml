@@ -1,0 +1,32 @@
+name: argocd-rollback
+system: example
+environment: prod
+namespace: applications
+appVersion: latest
+
+deployment:
+  image: docker.io/lhuckaz/argocd-rollback
+  tag: latest
+  containerPort: 3000
+  resources:
+    requests:
+      cpu: 250m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+service:
+  type: ClusterIP
+
+hpa:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 3
+
+configMaps: []
+
+secrets: []
+
+envs:
+  PORT: 3000
