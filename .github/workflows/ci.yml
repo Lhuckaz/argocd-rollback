@@ -18,7 +18,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          IMAGE=docker.io/your-dockerhub-username/argocd-rollback
+          IMAGE=docker.io/lhuckaz/argocd-rollback
           TAG=${{ github.sha }}
           docker build -t $IMAGE:$TAG .
           docker push $IMAGE:$TAG
