@@ -13,6 +13,8 @@ spec:
     path: charts/argocd-rollback
     targetRevision: HEAD
     helm:
+      valueFiles:
+        - envs/prod/values.yaml
       parameters:
         - name: deployment.tag
           value: $ARGOCD_APP_REVISION
@@ -20,3 +22,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
