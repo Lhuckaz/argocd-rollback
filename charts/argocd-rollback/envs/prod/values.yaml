@@ -17,7 +17,7 @@ deployment:
       memory: 512Mi
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
 
 hpa:
   enabled: true
