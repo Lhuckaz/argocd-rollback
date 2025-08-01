@@ -12,7 +12,7 @@ spec:
     app: {{ .Values.name }}
     name: {{ .Values.name }}
     environment: {{ .Values.environment }}
-  type: "ClusterIP"
+  type: {{ .Values.service.type | default "ClusterIP" }}
   ports:
     - name: http
       port: 80
