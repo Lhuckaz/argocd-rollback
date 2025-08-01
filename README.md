@@ -1,6 +1,6 @@
 # argocd-rollback
 
-A minimal ArgoCD + Helm demo that uses `$ARGOCD_APP_REVISION` to ensure safe and accurate rollbacks.
+A minimal ArgoCD + Helm demo that uses `$ARGOCD_APP_REVISION` to ensure safe and accurate rollbacks. Lets go.
 
 ## How it works
 
